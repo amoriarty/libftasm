@@ -6,7 +6,7 @@
 /*   By: alegent <alegent@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/07/01 12:39:39 by alegent           #+#    #+#             */
-/*   Updated: 2015/07/01 13:57:41 by alegent          ###   ########.fr       */
+/*   Updated: 2015/07/01 14:10:51 by alegent          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,16 @@ int										main(int ac, char **av)
 			printf("KO");
 		printf("\nft_isalnum\n");
 		if (ft_isalnum(av[1][0]))
+			printf("OK");
+		else
+			printf("KO");
+		printf("\nft_isprint(5)\n");
+		if (ft_isprint(5))
+			printf("OK");
+		else
+			printf("KO");
+		printf("\nft_isprint(av[1][0])\n");
+		if (ft_isprint(av[1][0]))
 			printf("OK");
 		else
 			printf("KO");
