@@ -6,11 +6,13 @@
 /*   By: alegent <alegent@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/07/01 12:39:39 by alegent           #+#    #+#             */
-/*   Updated: 2015/07/01 14:10:51 by alegent          ###   ########.fr       */
+/*   Updated: 2015/07/01 15:23:32 by alegent          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include "libfts.h"
 
 int										main(int ac, char **av)
@@ -54,6 +56,9 @@ int										main(int ac, char **av)
 			printf("OK");
 		else
 			printf("KO");
+		char			*test = strdup(av[1]);
+		ft_bzero(test, strlen(test));
+		printf("\nft_bzero = %s\n", test);
 	}
 	printf("\n");
 }
