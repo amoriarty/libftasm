@@ -6,7 +6,7 @@
 #    By: alegent <alegent@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/02/13 12:17:39 by alegent           #+#    #+#              #
-#    Updated: 2015/07/01 13:38:40 by alegent          ###   ########.fr        #
+#    Updated: 2015/07/01 13:56:50 by alegent          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,9 @@ NAME= libfts.a
 # define all the .c file in the variable SRC NAME
 SRC_PATH= srcs/
 SRC_NAME= ft_isalpha.s \
-		  ft_isdigit.s
+		  ft_isdigit.s \
+		  ft_isascii.s \
+		  ft_isalnum.s
 SRC= $(addprefix $(SRC_PATH), $(SRC_NAME))
 
 #OBJ BLOC

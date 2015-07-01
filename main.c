@@ -6,7 +6,7 @@
 /*   By: alegent <alegent@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/07/01 12:39:39 by alegent           #+#    #+#             */
-/*   Updated: 2015/07/01 13:37:03 by alegent          ###   ########.fr       */
+/*   Updated: 2015/07/01 13:57:41 by alegent          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,22 @@ int										main(int ac, char **av)
 
 		printf("\nft_isdigit\n");
 		if (ft_isdigit(av[1][0]))
+			printf("OK");
+		else
+			printf("KO");
+		printf("\nft_isascii\n");
+		printf("900 => ");
+		if (ft_isascii(900))
+			printf("OK");
+		else
+			printf("KO");
+		printf("\nav[1][0]\n");
+		if (ft_isascii(av[1][0]))
+			printf("OK");
+		else
+			printf("KO");
+		printf("\nft_isalnum\n");
+		if (ft_isalnum(av[1][0]))
 			printf("OK");
 		else
 			printf("KO");
