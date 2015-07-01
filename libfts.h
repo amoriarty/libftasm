@@ -6,7 +6,7 @@
 /*   By: alegent <alegent@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/07/01 12:42:09 by alegent           #+#    #+#             */
-/*   Updated: 2015/07/01 12:43:13 by alegent          ###   ########.fr       */
+/*   Updated: 2015/07/01 13:32:25 by alegent          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,6 @@
 # define LIBFTS_H
 
 int								ft_isalpha(int c);
+int								ft_isdigit(int c);
 
 #endif
