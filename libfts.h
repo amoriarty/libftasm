@@ -6,7 +6,7 @@
 /*   By: alegent <alegent@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/07/01 12:42:09 by alegent           #+#    #+#             */
-/*   Updated: 2015/07/04 12:33:30 by alegent          ###   ########.fr       */
+/*   Updated: 2015/07/04 12:38:01 by alegent          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,6 @@ void							*ft_memcpy(void *dst, const void *src, size_t n);
 void							ft_bzero(void *s, size_t n);
 size_t							ft_strlen(const char *s);
 char							*ft_strcat(char *s1, const char *s2);
+char							*ft_strdup(const char *s1);
 
 #endif

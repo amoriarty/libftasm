@@ -6,7 +6,7 @@
 /*   By: alegent <alegent@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/07/01 12:39:39 by alegent           #+#    #+#             */
-/*   Updated: 2015/07/04 12:33:14 by alegent          ###   ########.fr       */
+/*   Updated: 2015/07/04 12:41:03 by alegent          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ int										main(int ac, char **av)
 	char			*test;
 	char			*memtest;
 	char			*cattest;
+	char			*duptest;
 	int				i;
 
 	if (ac == 2)
@@ -94,6 +95,8 @@ int										main(int ac, char **av)
 			printf("%c", ft_toupper(av[1][i]));
 		printf("\nft_puts(av[1])\n");
 		ft_puts(av[1]);
+		duptest = ft_strdup(av[1]);
+		printf("ft_strdup(av[1]) = %s\n", duptest);
 	}
 	printf("\n");
 }
