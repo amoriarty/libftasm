@@ -6,7 +6,7 @@
 /*   By: alegent <alegent@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/07/01 12:39:39 by alegent           #+#    #+#             */
-/*   Updated: 2015/07/04 11:50:26 by alegent          ###   ########.fr       */
+/*   Updated: 2015/07/04 12:03:39 by alegent          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,13 @@
 
 int										main(int ac, char **av)
 {
-	char			*test = strdup(av[1]);
+	char			*test;
 	char			*memtest;
+	char			*cattest;
 
 	if (ac == 2)
 	{
+		test = strdup(av[1]);
 		printf("ft_isalpha\n");
 		if (ft_isalpha(av[1][0]))
 			printf("OK");
@@ -64,6 +66,12 @@ int										main(int ac, char **av)
 		printf("\nft_memset(42 * 10) = %s\n", memtest);
 		ft_bzero(test, strlen(test));
 		printf("\nft_bzero = %s\n", test);
+		printf("\nft_strlen(av[1]) = %ld\n", ft_strlen(av[1]));
+		ft_memcpy(test, av[1], 5);
+		printf("\nft_memcpy(test, av[1], 5) = %s\n", test);
+		cattest = (char *)malloc(sizeof(char *) * 10);
+		ft_strcat(cattest, av[1]);
+		printf("\nft_strcat(cattest, av[1]) (10) = %s\n", cattest);
 	}
 	printf("\n");
 }
