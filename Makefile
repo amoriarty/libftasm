@@ -6,7 +6,7 @@
 #    By: alegent <alegent@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/02/13 12:17:39 by alegent           #+#    #+#              #
-#    Updated: 2015/07/04 11:55:27 by alegent          ###   ########.fr        #
+#    Updated: 2015/07/04 12:21:59 by alegent          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,11 +25,15 @@ SRC_NAME= ft_isalpha.s \
 		  ft_isascii.s \
 		  ft_isalnum.s \
 		  ft_isprint.s \
+		  ft_isupper.s \
+		  ft_islower.s \
 		  ft_memset.s \
 		  ft_bzero.s \
 		  ft_memcpy.s \
 		  ft_strlen.s \
-		  ft_strcat.s
+		  ft_strcat.s \
+		  ft_tolower.s \
+		  ft_toupper.s 
 SRC= $(addprefix $(SRC_PATH), $(SRC_NAME))
 
 #OBJ BLOC

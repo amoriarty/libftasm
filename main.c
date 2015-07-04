@@ -6,7 +6,7 @@
 /*   By: alegent <alegent@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/07/01 12:39:39 by alegent           #+#    #+#             */
-/*   Updated: 2015/07/04 12:03:39 by alegent          ###   ########.fr       */
+/*   Updated: 2015/07/04 12:25:15 by alegent          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ int										main(int ac, char **av)
 	char			*test;
 	char			*memtest;
 	char			*cattest;
+	int				i;
 
 	if (ac == 2)
 	{
@@ -72,6 +73,25 @@ int										main(int ac, char **av)
 		cattest = (char *)malloc(sizeof(char *) * 10);
 		ft_strcat(cattest, av[1]);
 		printf("\nft_strcat(cattest, av[1]) (10) = %s\n", cattest);
+		printf("\nft_isupper(av[1][0])\n");
+		if (ft_isupper(av[1][0]))
+			printf("OK");
+		else
+			printf("KO");
+		printf("\nft_islower(av[1][0])\n");
+		if (ft_islower(av[1][0]))
+			printf("OK");
+		else
+			printf("KO");
+
+		i = -1;
+		printf("\nft_tolower(av[1])\n");
+		while (av[1][++i])
+			printf("%c", ft_tolower(av[1][i]));
+		i = -1;
+		printf("\nft_toupper(av[1])\n");
+		while (av[1][++i])
+			printf("%c", ft_toupper(av[1][i]));
 	}
 	printf("\n");
 }
