@@ -6,7 +6,7 @@
 #    By: alegent <alegent@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/02/13 12:17:39 by alegent           #+#    #+#              #
-#    Updated: 2015/07/04 13:00:00 by alegent          ###   ########.fr        #
+#    Updated: 2015/07/04 14:28:01 by alegent          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,8 @@ SRC_NAME= ft_isalpha.s \
 		  ft_tolower.s \
 		  ft_toupper.s \
 		  ft_puts.s \
-		  ft_strdup.s
+		  ft_strdup.s \
+		  ft_cat.s
 SRC= $(addprefix $(SRC_PATH), $(SRC_NAME))
 
 #OBJ BLOC

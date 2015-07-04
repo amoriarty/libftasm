@@ -6,7 +6,7 @@
 /*   By: alegent <alegent@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/07/01 12:42:09 by alegent           #+#    #+#             */
-/*   Updated: 2015/07/04 12:48:06 by alegent          ###   ########.fr       */
+/*   Updated: 2015/07/04 14:29:19 by alegent          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,6 @@ void							ft_bzero(void *s, size_t n);
 size_t							ft_strlen(const char *s);
 char							*ft_strcat(char *s1, const char *s2);
 char							*ft_strdup(const char *s1);
+void							ft_cat(int fd);
 
 #endif
