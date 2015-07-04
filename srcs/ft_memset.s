@@ -6,13 +6,13 @@
 #    By: alegent <alegent@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/07/04 11:39:44 by alegent           #+#    #+#              #
-#    Updated: 2015/07/04 11:42:41 by alegent          ###   ########.fr        #
+#    Updated: 2015/07/04 13:05:13 by alegent          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-global _ft_memset
+global ft_memset
 
-_ft_memset:
+ft_memset:
 	push rdi
 	mov rax, rsi
 	cld

@@ -6,35 +6,34 @@
 #    By: alegent <alegent@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/07/04 11:51:59 by alegent           #+#    #+#              #
-#    Updated: 2015/07/04 11:57:33 by alegent          ###   ########.fr        #
+#    Updated: 2015/07/04 13:06:18 by alegent          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-global _ft_strcat
-extern malloc
-extern _ft_strlen
-extern _ft_memcpy
+global ft_strcat
+extern ft_strlen
+extern ft_memcpy
 
-_ft_strcat:
+ft_strcat:
 	push rdi
 	push rsi
-	jmp _null
+	jmp null
 
-_null:
+null:
 	mov al, [rdi]
 	cmp al, 0
-	je _cast
+	je cast
 	inc rdi
-	jmp _null
+	jmp null
 
-_cast:
+cast:
 	push rdi
 	mov rdi, rsi
-	call _ft_strlen
+	call ft_strlen
 	mov rdx, rax
 	inc rdx
 	pop rdi
 	pop rsi
-	call _ft_memcpy
+	call ft_memcpy
 	pop rax
 	ret

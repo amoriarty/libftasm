@@ -6,29 +6,26 @@
 #    By: alegent <alegent@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/07/01 12:04:19 by alegent           #+#    #+#              #
-#    Updated: 2015/07/01 12:39:07 by alegent          ###   ########.fr        #
+#    Updated: 2015/07/04 13:02:16 by alegent          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-global _ft_isalpha
+global ft_isalpha
 
-_ft_isalpha:
+ft_isalpha:
 	cmp rdi, 65
-	jl _stop
+	jl false
 	cmp rdi, 90
-	jle _continue
+	jle true
 	cmp rdi, 97
-	jl _stop
+	jl false
 	cmp rdi, 122
-	jle _continue
+	jle true
 
-_stop:
+false:
 	mov rax, 0
-	jmp end
+	ret
 
-_continue:
+true:
 	mov rax, 1
-	jmp end
-
-end:
 	ret

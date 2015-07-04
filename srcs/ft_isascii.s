@@ -1,17 +1,26 @@
-global _ft_isascii
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    ft_isascii.s                                       :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: alegent <alegent@student.42.fr>            +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2015/07/04 13:02:22 by alegent           #+#    #+#              #
+#    Updated: 2015/07/04 13:02:51 by alegent          ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
 
-_ft_isascii:
+global ft_isascii
+
+ft_isascii:
 	cmp rdi, 127
-	jle y
-	jmp no
+	jle true
+	jmp false
 
-y:
+true:
 	mov rax, 1
-	jmp end
+	ret
 
-no:
+false:
 	mov rax, 0
-	jmp end
-
-end:
 	ret

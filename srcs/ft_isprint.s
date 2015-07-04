@@ -6,25 +6,22 @@
 #    By: alegent <alegent@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/07/01 14:07:29 by alegent           #+#    #+#              #
-#    Updated: 2015/07/01 14:09:15 by alegent          ###   ########.fr        #
+#    Updated: 2015/07/04 13:04:23 by alegent          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-global _ft_isprint
+global ft_isprint
 
-_ft_isprint:
+ft_isprint:
 	cmp rdi, 32
-	jl _false
+	jl false
 	cmp rdi, 126
-	jle _true
+	jle true
 
-_false:
+false:
 	mov rax, 0
-	jmp end
+	ret
 
-_true:
+true:
 	mov rax, 1
-	jmp end
-
-end:
 	ret

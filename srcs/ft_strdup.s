@@ -1,34 +1,40 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    ft_strdup.s                                        :+:      :+:    :+:    #
+#    ft_stdup.s                                         :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: alegent <alegent@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2015/07/04 12:35:59 by alegent           #+#    #+#              #
-#    Updated: 2015/07/04 12:40:34 by alegent          ###   ########.fr        #
+#    Created: 2015/07/04 13:45:16 by alegent           #+#    #+#              #
+#    Updated: 2015/07/04 13:49:10 by alegent          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-global _ft_strdup
-extern _malloc
-extern _ft_strlen
-extern _ft_memcpy
+global ft_strdup
+extern ft_strlen
+extern ft_memcpy
+extern malloc
 
-_ft_strdup:
+ft_strdup:
+	push r15
+	push r14
+	mov r15, rdi
+	call ft_strlen
+	mov r14, rax
+	mov rdi, rax
+	inc rdi
 	push rdi
-	call _ft_strlen
-	mov rdx, rax
-	inc rdx
-	push rdx
+	call malloc
+	pop rdi
+	cmp rax, 0
+	je end
+	mov [rax + r14], byte 0
 	mov rdi, rax
-	call _malloc
-	jc _end
-	pop rdx
-	pop rsi
-	mov rdi, rax
-	call _ft_memcpy
-	jmp _end
+	mov rsi, r15
+	mov rdx, r14
+	call ft_memcpy
 
-_end:
+end:
+	pop r14
+	pop r15
 	ret

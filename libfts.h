@@ -6,12 +6,13 @@
 /*   By: alegent <alegent@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/07/01 12:42:09 by alegent           #+#    #+#             */
-/*   Updated: 2015/07/04 12:38:01 by alegent          ###   ########.fr       */
+/*   Updated: 2015/07/04 12:48:06 by alegent          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFTS_H
 # define LIBFTS_H
+# include <stdlib.h>
 
 int								ft_isalpha(int c);
 int								ft_isdigit(int c);

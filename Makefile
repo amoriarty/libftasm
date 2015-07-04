@@ -6,7 +6,7 @@
 #    By: alegent <alegent@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/02/13 12:17:39 by alegent           #+#    #+#              #
-#    Updated: 2015/07/04 12:38:12 by alegent          ###   ########.fr        #
+#    Updated: 2015/07/04 13:00:00 by alegent          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -69,7 +69,7 @@ $(NAME): $(OBJ)
 
 $(OBJ_PATH)%.o: $(SRC_PATH)%.s
 	@mkdir $(OBJ_PATH) 2> /dev/null || echo "" 2> /dev/null
-	@nasm -f macho64 $< -o $@
+	@nasm -f macho64 --prefix _ $< -o $@
 
 clean:
 	@rm -rf $(OBJ)

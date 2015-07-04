@@ -6,24 +6,24 @@
 #    By: alegent <alegent@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/07/04 12:14:51 by alegent           #+#    #+#              #
-#    Updated: 2015/07/04 12:20:09 by alegent          ###   ########.fr        #
+#    Updated: 2015/07/04 13:07:16 by alegent          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-global _ft_tolower
-extern _ft_isupper
+global ft_tolower
+extern ft_isupper
 
-_ft_tolower:
-	call _ft_isupper
+ft_tolower:
+	call ft_isupper
 	cmp rax, 1
-	je _lower
-	jmp _nothing
+	je lower
+	jmp nothing
 
-_lower:
+lower:
 	add rdi, 32
 	mov rax, rdi
 	ret
 
-_nothing:
+nothing:
 	mov rax, rdi
 	ret

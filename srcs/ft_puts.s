@@ -6,7 +6,7 @@
 #    By: alegent <alegent@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/07/04 12:27:24 by alegent           #+#    #+#              #
-#    Updated: 2015/07/04 12:34:12 by alegent          ###   ########.fr        #
+#    Updated: 2015/07/04 13:09:03 by alegent          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,31 +21,31 @@ nl:		db		0x0a
 .len:	equ	$ - nl
 
 section .text
-	global _ft_puts
-	extern _ft_strlen
+	global ft_puts
+	extern ft_strlen
 
-_ft_puts:
+ft_puts:
 	cmp rdi, 0
-	je _putn
+	je putn
 	lea rsi, [rdi]
-	call _ft_strlen
+	call ft_strlen
 	mov rdx, rax
 	push rdx
 	mov rdi, STDOUT
 	mov rax, MACH_SYSCALL(WRITE)
 	syscall
-	jmp _putnl
+	jmp putnl
 
-_putn:
+putn:
 	mov rdx, null.len
 	push rdx
 	lea rsi, [rel null]
 	mov rdi, STDOUT
 	mov rax, MACH_SYSCALL(WRITE)
 	syscall
-	jmp _putnl
+	jmp putnl
 
-_putnl:
+putnl:
 	mov rdx, nl.len
 	lea rsi, [rel nl]
 	mov rdi, STDOUT

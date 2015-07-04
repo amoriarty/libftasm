@@ -6,13 +6,13 @@
 #    By: alegent <alegent@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/07/04 11:54:26 by alegent           #+#    #+#              #
-#    Updated: 2015/07/04 11:55:00 by alegent          ###   ########.fr        #
+#    Updated: 2015/07/04 13:05:01 by alegent          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-global _ft_memcpy
+global ft_memcpy
 
-_ft_memcpy:
+ft_memcpy:
 	push rdi
 	cld
 	mov rcx, rdx
