@@ -6,7 +6,7 @@
 /*   By: alegent <alegent@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/07/01 12:39:39 by alegent           #+#    #+#             */
-/*   Updated: 2015/07/04 12:41:03 by alegent          ###   ########.fr       */
+/*   Updated: 2015/07/04 14:44:17 by alegent          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,29 +26,28 @@ int										main(int ac, char **av)
 	if (ac == 2)
 	{
 		test = strdup(av[1]);
-		printf("ft_isalpha\n");
+		printf("ft_isalpha(av[1][0])\n");
 		if (ft_isalpha(av[1][0]))
 			printf("OK");
 		else
 			printf("KO");
 
-		printf("\nft_isdigit\n");
+		printf("\nft_isdigit(av[1][0])\n");
 		if (ft_isdigit(av[1][0]))
 			printf("OK");
 		else
 			printf("KO");
-		printf("\nft_isascii\n");
-		printf("900 => ");
+		printf("\nft_isascii(900)\n");
 		if (ft_isascii(900))
 			printf("OK");
 		else
 			printf("KO");
-		printf("\nav[1][0]\n");
+		printf("\nft_isascii(av[1][0])\n");
 		if (ft_isascii(av[1][0]))
 			printf("OK");
 		else
 			printf("KO");
-		printf("\nft_isalnum\n");
+		printf("\nft_isalnum(av[1][0])\n");
 		if (ft_isalnum(av[1][0]))
 			printf("OK");
 		else
@@ -65,9 +64,9 @@ int										main(int ac, char **av)
 			printf("KO");
 		memtest = (char *)malloc(sizeof(char *) * 10);
 		ft_memset(memtest, 42, 10);
-		printf("\nft_memset(42 * 10) = %s\n", memtest);
+		printf("\nft_memset(memtest, 42, 10) = %s\n", memtest);
 		ft_bzero(test, strlen(test));
-		printf("\nft_bzero = %s\n", test);
+		printf("\nft_bzero(test, strlen(test)) = %s\n", test);
 		printf("\nft_strlen(av[1]) = %ld\n", ft_strlen(av[1]));
 		ft_memcpy(test, av[1], 5);
 		printf("\nft_memcpy(test, av[1], 5) = %s\n", test);
@@ -98,5 +97,7 @@ int										main(int ac, char **av)
 		duptest = ft_strdup(av[1]);
 		printf("ft_strdup(av[1]) = %s\n", duptest);
 	}
+	else
+		printf("I need one and only one argument !");
 	printf("\n");
 }
