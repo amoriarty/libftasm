@@ -6,7 +6,7 @@
 /*   By: alegent <alegent@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/07/01 12:42:09 by alegent           #+#    #+#             */
-/*   Updated: 2015/07/04 12:16:17 by alegent          ###   ########.fr       */
+/*   Updated: 2015/07/04 12:33:30 by alegent          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ int								ft_isupper(int c);
 int								ft_islower(int c);
 int								ft_tolower(int c);
 int								ft_toupper(int c);
+int								ft_puts(const char *s);
 void							*ft_memset(void *b, int c, size_t len);
 void							*ft_memcpy(void *dst, const void *src, size_t n);
 void							ft_bzero(void *s, size_t n);

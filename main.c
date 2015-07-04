@@ -6,7 +6,7 @@
 /*   By: alegent <alegent@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/07/01 12:39:39 by alegent           #+#    #+#             */
-/*   Updated: 2015/07/04 12:25:15 by alegent          ###   ########.fr       */
+/*   Updated: 2015/07/04 12:33:14 by alegent          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,6 +92,8 @@ int										main(int ac, char **av)
 		printf("\nft_toupper(av[1])\n");
 		while (av[1][++i])
 			printf("%c", ft_toupper(av[1][i]));
+		printf("\nft_puts(av[1])\n");
+		ft_puts(av[1]);
 	}
 	printf("\n");
 }
